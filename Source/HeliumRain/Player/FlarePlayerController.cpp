@@ -1757,8 +1757,9 @@ void AFlarePlayerController::SetUseCockpit(bool New)
 void AFlarePlayerController::SetUseMotionBlur(bool New)
 {
 	UseMotionBlur = New;
+
 	GetGame()->GetPostProcessVolume()->Settings.bOverride_MotionBlurAmount = true;
-	GetGame()->GetPostProcessVolume()->Settings.MotionBlurAmount = UseMotionBlur ? 0.25 : 0;
+	GetGame()->GetPostProcessVolume()->Settings.MotionBlurAmount = UseMotionBlur ? 0.5f : 0.0f;
 }
 
 void AFlarePlayerController::SetPauseGameInMenus(bool New)
